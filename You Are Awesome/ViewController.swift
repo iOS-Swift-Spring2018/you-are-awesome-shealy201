@@ -9,17 +9,27 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var messageLabel: UILabel!
+    
+    // Code below executes when the app's view first loads
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func Greatmessage(_ sender: UIButton) {
+        
+        var messages = ["You Are Fantastic!","You Are Great!","You Are Amazing!","You Are Awesome"]
+        
+        if messageLabel.text == messages[0] {
+            messageLabel.text = messages[1]
+        } else if messageLabel.text == messages[1] {
+            messageLabel.text = messages[2]
+        } else {
+            messageLabel.text = messages[0]
+        }
     }
-
-
+    
+    
 }
 
