@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     var imageNumber =  -1
     var soundNumber = -1
     let numberOfImages = 4
-    let numberOfSounds = 2
+    let numberOfSounds = 3
     var soundName = ""
     
     // Code below executes when the app's view first loads
@@ -63,7 +63,7 @@ class ViewController: UIViewController {
         awesomeImage.isHidden = false
         
         imageNumber = nonRepeatingRandom(lastNumber: imageNumber, maxValue: numberOfImages)
-        awesomeImage.image = UIImage(named: "image1\(imageNumber)")
+        awesomeImage.image = UIImage(named: "image" + String(imageNumber))
         
         //Play a sound
         soundNumber = nonRepeatingRandom(lastNumber: soundNumber, maxValue: numberOfSounds)
